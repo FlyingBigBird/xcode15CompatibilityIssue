@@ -1,3 +1,11 @@
 升级xcode15后，提示duplicate symbols，.a库等文件重复原因是更新列链接库，导致兼容性异常
 修改方式：
   build setting -> other link flags  添加 -ld64
+
+
+模拟器问题：
+    xcode-select -s /Applications/Xcode-beta.app
+    xcodebuild -runFirstLaunch
+    xcrun simctl runtime add "~/Downloads/watchOS 9 beta Simulator Runtime.dmg"
+
+参考链接：https://developer.apple.com/documentation/xcode/installing-additional-simulator-runtimes
